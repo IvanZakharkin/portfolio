@@ -1,0 +1,67 @@
+.form {
+  max-width: 850px;
+  &__row {
+    display: flex;
+    margin-bottom: 40px;
+  }
+
+  &__block {
+    flex: 1;
+    margin-right: 100px;
+    position: relative;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+  &__block-title {
+    padding-left: 45px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #4f465d;
+  }
+  &__input {
+    width: 100%;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    color: #fff;
+    padding: 15px 15px 15px 45px;
+    position: relative;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 2.25;
+
+    &_textarea {
+      resize: none;
+    }
+
+  }
+  
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+    fill: #584e65;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  &__btn-send {
+    background: linear-gradient(to right, #3157e8 0%, #4d88ee 100%);
+    padding: 30px 120px;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+}

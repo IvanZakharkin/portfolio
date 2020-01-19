@@ -1,0 +1,12 @@
+mixin icon(name, className)
+  - var icon = require(`images/icons/${name}.svg`);
+  svg(class=className viewBox=icon.viewBox preserveAspectRatio="none")
+    use(xlink:href=icon.url)
+
+mixin image(path, className)
+  img(src=require(`images/${path}`) class=className)
+
+mixin formBlock(title, elementType, elementName)
+  label.form__block
+    .form__block-title= title
+    input(class=`form__input form__input_${elementName}` type= elementType name= elementName)

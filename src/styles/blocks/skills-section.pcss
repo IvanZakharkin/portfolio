@@ -1,0 +1,40 @@
+.skills-section {
+  background: url("~images/backgrounds/bg-text.png") 0 50% no-repeat;
+  position: relative;
+
+
+  &:before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 30%;
+    background: url("~images/backgrounds/bg-guitar.png") 50% 50%/contain no-repeat;
+    position: absolute;
+    top: -20%;
+    left: 0;
+  }
+}
+.skills-section__container {
+  display: flex;
+  flex-direction: column;
+  padding: 120px 0% 140px 28%;
+}
+
+.skills-section__title {
+  font-size: 30px;
+  color: #100022;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.skills-section__text {
+  font-size: 16px;
+  color: #97909f;
+  font-weight: 600;
+  max-width: 599px;
+  margin-bottom: 85px;
+  line-height: 1.875;
+}
+.skills-section__list {
+  padding-left: 15%;
+}
