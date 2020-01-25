@@ -1,16 +1,28 @@
 .form {
-  max-width: 850px;
+
   &__row {
     display: flex;
     margin-bottom: 40px;
+
+    @include tablets {
+      justify-content: center;
+    }
+    @include phones {
+      flex-direction: column;
+    }
+    
   }
 
   &__block {
     flex: 1;
-    margin-right: 100px;
+    margin-right: 50px;
     position: relative;
 
     &:last-child {
+      margin-right: 0px;
+    }
+
+    @include phones {
       margin-right: 0px;
     }
   }

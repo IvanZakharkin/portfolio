@@ -1,0 +1,44 @@
+[
+  {
+    "nameSkillsGroup":"Frontend",
+    "skills": [
+      {
+        "name": "HTML5",
+        "percent": 80
+      },
+      {
+        "name": "CSS3",
+        "percent": 80
+      },
+      {
+        "name": "Javascript",
+        "percent": 50
+      },
+      {
+        "name": "Jquery и Vue.js",
+        "percent": 30
+      }
+    ]
+  },
+  {
+    "nameSkillsGroup":"Workflow",
+    "skills": [
+      {
+        "name": "GIT",
+        "percent": 50
+      },
+      {
+        "name": "terminal",
+        "percent": 50
+      },
+      {
+        "name": "gulp",
+        "percent": 40
+      },
+      {
+        "name": "Webpack",
+        "percent": 30
+      }
+    ]
+  }
+]

@@ -1,10 +1,33 @@
 .contact {
+  &__form {
+    max-width: 865px;
 
+    @include tablets {
+      width: 100%;
+    }
+  }
   &__title {
     font-size: 36px;
     color: #fff;
     margin-bottom: 80px;
     font-size: 36px;
     font-weight: 700;
+
+    @include tablets {
+      text-align: center;
+    }
+    
   }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    @include tablets {
+      align-items: center;
+    }
+    
+  }
+
+  
 }

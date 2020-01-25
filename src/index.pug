@@ -9,7 +9,26 @@ html(lang="en")
     title Portfolio | main page
   body
     .wrapper
-      .bg-rock-fest
+      .bg-rockfest
+        //- .bg-rockfest__layer
+        //-   +image("parallax/1.png", "bg-rockfest__item1")
+        //- .bg-rockfest__layer
+        //-   +image("parallax/2.png", "bg-rockfest__item2")
+        //- .bg-rockfest__layer
+        //-   +image("parallax/3.png", "bg-rockfest__item3")
+        //- .bg-rockfest__layer
+        //-   +image("parallax/4.png", "bg-rockfest__item4")
+        //- .bg-rockfest__layer
+        //-   +image("parallax/5.png", "bg-rockfest__item5")
+        //- .bg-rockfest__layer
+        //-   +image("parallax/6.png", "bg-rockfest__item6")
+        //- .bg-rockfest__layer
+        //-   +image("parallax/7.png", "bg-rockfest__item7")
+        //- .bg-rockfest__layer
+        //-   +image("parallax/8.png", "bg-rockfest__item8")
+        //- .bg-rockfest__layer
+        //-   +image("parallax/9.png", "bg-rockfest__item9")
+        
         section.welcome-section
           .container.welcome-section__container
             header.welcome-section__header
@@ -74,28 +93,8 @@ html(lang="en")
         .container.skills-section__container
           h2.skills-section__title Чем я могу быть полезен вам
           p.skills-section__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!   
-          ul.skills-section__list.skills
-            li.skills__item.skills-row
-              .skills-row__title Front-end
-              ul.skills-row__list
-                each frontSkill in ["HTML5", "CSS3", "Javascript", "Jquery и Vue.js"]
-                  li.skills-row__item
-                    .skill
-                      svg.skill__progress-bar(viewBox="0 0 200 200" preserveAspectRatio="none")
-                        circle.skill__circle(r="88" cx="100" cy="100" )
-                        circle.skill__progress-circle(r="88" cx="100" cy="100")
-                      .skill__text= frontSkill
-            li.skills__item.skills-row
-              .skills-row__title Workflow
-              ul.skills-row__list
-                each workSkill in ["GIT", "terminal", "gulp", "Webpack"]
-                  li.skills-row__item
-                    .skill
-                      svg.skill__progress-bar(viewBox="0 0 200 200" preserveAspectRatio="none")
-                        circle.skill__circle(r="88" cx="100" cy="100" )
-                        circle.skill__progress-circle(r="88" cx="100" cy="100")
-                      .skill__text= workSkill
-        
+          .skills-section__list
+            #skills-components
           
       section.projects
         .container
@@ -184,9 +183,9 @@ html(lang="en")
                           .review__job= reviewsItem.job
               
         section.contact
-          .container
+          .container.contact__container
             .contact__title Связаться со мной
-            form.form(action="post")
+            form.form.contact__form(action="post")
               .form__col
                 .form__row
                   label.form__block
@@ -233,3 +232,5 @@ html(lang="en")
               blockquote.footer__blockquote.blockquote
                 .blockquote__text Всегда пишите код так, как будто сопровождать его будет склонный к насилию психопат, который знает, где вы живёте
                 .blockquote__author Martini Golding
+
+    include ./templates/entry.pug

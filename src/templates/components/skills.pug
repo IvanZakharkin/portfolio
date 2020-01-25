@@ -1,0 +1,29 @@
+script(type="text/x-template")#skills
+  ul.skills
+    li.skills__item(v-for="group in skillsGroups")
+      skills-row(
+        :skillsGroup= "group"
+      )
+          
+
+script(type="text/x-template")#skills-row
+  .skills-row
+    .skills-row__title {{skillsGroup.nameSkillsGroup}}
+    ul.skills-row__list
+      li.skills-row__item(v-for="skill in skillsGroup.skills")
+        skill(
+          :skill= "skill"
+        )
+
+
+script(type="text/x-template")#skill
+  .skill
+    svg.skill__progress-bar(viewBox="0 0 200 200" preserveAspectRatio="none")
+      circle.skill__circle(r="88" cx="100" cy="100" )
+      circle.skill__progress-circle(r="88" cx="100" cy="100" ref="progress-circle" stroke="url(#gradient)")
+      linearGradient(id='gradient')
+        stop(stop-color='tomato' offset='0')
+        stop(stop-color="royalblue" offset="1")
+    .skill__text {{skill.name}}
+
+

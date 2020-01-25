@@ -3,16 +3,37 @@
   justify-content: center;
   padding: 50px 14% 125px;
 
+  @include desktop {
+    padding-left:0;
+    padding-right: 6.6%;
+  }
+  @include tablets {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @include phones {
+    flex-direction: column;
+  }
+
 }
 
 .about-me__left {
-  width: 34.6%;
-  margin-right: 8.5%;
+  width: 35.75%;
+  margin-right: 8.2%;
+
+  @include desktop {
+    width: 34.39%;
+    margin-right: 11.19%;
+  }
   
+  @include phones {
+    width: 100%;
+    margin-right: 0%;
+  }
 }
 
 .about-me__right {
-  width: 62.5%;
+  flex: 1;
   font-size: 16px;
   color: #a2a2a6;
   font-weight: 600;
