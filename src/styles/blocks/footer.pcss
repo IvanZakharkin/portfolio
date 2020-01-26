@@ -5,6 +5,13 @@
 .footer__container {
   display: flex;
   padding: 90px 0;
+
+  @include tablets {
+    padding: 60px 0;
+  }
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .footer__copyright {
@@ -12,6 +19,22 @@
   width: 25.5%;
   margin-right: 6.7%;
   justify-content: space-between;
+
+  @include desktop {
+    flex-direction: column;
+    width: 17%;
+    margin-right: 8.7%;
+  }
+  @include tablets {
+    width: 30.38%;
+    margin-right: 20px;
+    justify-content: flex-start;
+  }
+  @include phones {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 30px;
+  }
 }
 
 .footer__nav {
@@ -27,15 +50,33 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+
+  
 }
 .footer__text {
   display: flex;
   justify-content: space-between;
 
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .footer__socials {
   width: 35.6%;
+
+  @include tablets {
+    width: 100%;
+  }
+
+  @include tablets {
+    margin-bottom: 50px;
+  }
+
+  @include phones {
+    margin-bottom: 30px;
+  }
+  
 }
 .footer__socials-text {
   font-size: 16px;
@@ -47,5 +88,12 @@
 
 .footer__blockquote {
   width: 48.5%;
+  @include desktop {
+    width: 54.53%;
+  }
+
+  @include tablets {
+    width: 100%;
+  }
 }
 

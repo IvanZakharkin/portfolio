@@ -1,0 +1,26 @@
+.slider
+  .slider__display
+    +image("works-preview/1.jpg", "slider__display-pic")
+    .slider__display-preview
+      ul.slider-preview
+        each item in ["1", "2", "3", "4", "5"]
+          li.slider-preview__item
+            a.slider-preview__link(href="#")
+                +image(`works-preview/${item}.jpg`, "slider__preview-pic")
+  .slider__center
+    .slider__number 2         
+    .slider__buttons
+      button.btn-arrow.btn-arrow_left.btn-arrow_project
+        +icon('short-arrow', 'btn-arrow__pic')
+      button.btn-arrow.btn-arrow_right.btn-arrow_project
+        +icon('short-arrow', 'btn-arrow__pic')
+  .slider__info
+    .slider__tags
+      ul.tags 
+        each item in ["html", "css", "javascript"]
+          li.tags__item= item
+    .slider__info-desc
+      h4.slider__info-title Сайт школы образования
+      .slider__info-text  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi officia id iusto provident repellendus explicabo facilis accusantium voluptatibus, porro sint asperiores quibusdam dolorem in sit magnam praesentium illum saepe aliquid.
+    .slider__info-btns
+      a.iconed-link Посмотреть сайт   

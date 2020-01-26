@@ -1,0 +1,37 @@
+.burger-menu {
+  background: none;
+  display: none;
+  border: none;
+  width: 26px;
+  height: 22px;
+
+
+  @include tablets {
+    display: block;
+  }
+
+  &__line {
+    width: 24px;
+    height: 4px;
+    background: #fff;
+    position: relative;
+    display: block;
+
+    &:before, &:after {
+      display: block;
+      content: "";
+      width: 24px;
+      height: 4px;
+      background: #fff;
+      position: absolute;
+      
+    }
+
+    &:before {
+      top: 8.5px;
+    }
+    &:after {
+      top: 15px;
+    }
+  }
+}

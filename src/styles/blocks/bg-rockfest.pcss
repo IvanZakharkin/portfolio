@@ -1,64 +1,73 @@
 .bg-rockfest {
   position: relative;
-  overflow: hidden;
-  background: #100022 url("~images/backgrounds/Rock-Fest.jpg") center center / cover no-repeat;
+  // overflow: hidden;
+  // background: #100022 url("~images/backgrounds/Rock-Fest.jpg") center center / cover no-repeat;
   // url(`${require("/images/backgrounds/Rock Fest.jpg")}`) center center / cover no-repeat;
 }
-.bg-rockfest__layer {
+
+.welcome-parallax {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+.welcome-parallax__layer {
   position: absolute;
   top:0;
   left: 0;
   bottom: 0;
   right:0;
+  will-change: transform;
 }
 
-.bg-rockfest__item1 {
+.welcome-parallax__item1 {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
 
-.bg-rockfest__item2 {
-  top: -273px;
+.welcome-parallax__item2 {
+  top: 0;
   left:0;
   position: absolute;
-  opacity: 0.5;
 }
-.bg-rockfest__item3 {
-  top: 297px;
+.welcome-parallax__item3 {
+  top: 480px;
   left:0;
   position: absolute;
-  opacity: 0.5;
 }
-.bg-rockfest__item4 {
+.welcome-parallax__item4 {
   top: 444px;
   left:0;
   position: absolute;
-  opacity: 0.5;
 }
-.bg-rockfest__item5 {
+.welcome-parallax__item5 {
   top: 800px;
   left:0;
   position: absolute;
 }
-.bg-rockfest__item6 {
+.welcome-parallax__item6 {
   top: 374px;
   left:0;
   position: absolute;
 }
-.bg-rockfest__item7 {
-  // top: 824px;
-  bottom: 0;
+.welcome-parallax__item7 {
+  top: 824px;
+  // bottom: 696px;
   left:0;
   position: absolute;
 }
-.bg-rockfest__item8 {
+.welcome-parallax__item8 {
   top: 320px;
   left:0;
   position: absolute;
 }
-.bg-rockfest__item9 {
+.welcome-parallax__item9 {
   top: 0px;
   left:0;
   position: absolute;

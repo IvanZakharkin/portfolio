@@ -10,25 +10,26 @@ html(lang="en")
   body
     .wrapper
       .bg-rockfest
-        //- .bg-rockfest__layer
-        //-   +image("parallax/1.png", "bg-rockfest__item1")
-        //- .bg-rockfest__layer
-        //-   +image("parallax/2.png", "bg-rockfest__item2")
-        //- .bg-rockfest__layer
-        //-   +image("parallax/3.png", "bg-rockfest__item3")
-        //- .bg-rockfest__layer
-        //-   +image("parallax/4.png", "bg-rockfest__item4")
-        //- .bg-rockfest__layer
-        //-   +image("parallax/5.png", "bg-rockfest__item5")
-        //- .bg-rockfest__layer
-        //-   +image("parallax/6.png", "bg-rockfest__item6")
-        //- .bg-rockfest__layer
-        //-   +image("parallax/7.png", "bg-rockfest__item7")
-        //- .bg-rockfest__layer
-        //-   +image("parallax/8.png", "bg-rockfest__item8")
-        //- .bg-rockfest__layer
-        //-   +image("parallax/9.png", "bg-rockfest__item9")
-        
+        .welcome-parallax
+          .welcome-parallax__layer(data-speed="0")
+            +image("parallax/welcome-parallax/1.png", "welcome-parallax__item1")
+          .welcome-parallax__layer(data-speed="0.13")
+            +image("parallax/welcome-parallax/2.png", "welcome-parallax__item2")
+          .welcome-parallax__layer(data-speed="0.18")
+            +image("parallax/welcome-parallax/3.png", "welcome-parallax__item3")
+          .welcome-parallax__layer(data-speed="0.23")
+            +image("parallax/welcome-parallax/4.png", "welcome-parallax__item4")
+          .welcome-parallax__layer(data-speed="0.28")
+            +image("parallax/welcome-parallax/5.png", "welcome-parallax__item5")
+          .welcome-parallax__layer(data-speed="0.33")
+            +image("parallax/welcome-parallax/6.png", "welcome-parallax__item6")
+          .welcome-parallax__layer(data-speed="0.38")
+            +image("parallax/welcome-parallax/7.png", "welcome-parallax__item7")
+          .welcome-parallax__layer(data-speed="0.43")
+            +image("parallax/welcome-parallax/8.png", "welcome-parallax__item8")
+          .welcome-parallax__layer(data-speed="0.48")
+            +image("parallax/welcome-parallax/9.png", "welcome-parallax__item9")
+          
         section.welcome-section
           .container.welcome-section__container
             header.welcome-section__header
@@ -47,10 +48,13 @@ html(lang="en")
                       li.socials__item
                         a(class=`socials__link` href='#')
                           +icon(`${socialsItem}`, 'socials__icon')
+              .welcome-section__burger-menu
+                a.burger-menu
+                  span.burger-menu__line            
             .welcome-section__text
               .user-info
-                .user-info__desc Личный сайт<br> веб-разработчика
-                .user-info__name Захаркин<br>Иван
+                .user-info__desc Личный сайт веб-разработчика
+                .user-info__name Захаркин Иван
             .welcome-section__scroll    
               button.scroll 
                 .scroll__text Скролл
@@ -89,7 +93,7 @@ html(lang="en")
       section.skills-section
         .triangles
           svg.triangles__item(viewBox="0 0 1000 100" preserveAspectRatio="none")
-            polygon(points="0,0 769,83 1000,0")
+            polygon(points="0,0 780,100 1000,0")
         .container.skills-section__container
           h2.skills-section__title Чем я могу быть полезен вам
           p.skills-section__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!   
@@ -100,6 +104,7 @@ html(lang="en")
         .container
           h2.projects__title Мои работы
           .projects__content
+            #projects-slider-component
             .slider
               .slider__display
                 +image("works-preview/1.jpg", "slider__display-pic")
@@ -109,13 +114,11 @@ html(lang="en")
                       li.slider-preview__item
                         a.slider-preview__link(href="#")
                            +image(`works-preview/${item}.jpg`, "slider__preview-pic")
-              .slider__center
-                .slider__number 2         
                 .slider__buttons
                   button.btn-arrow.btn-arrow_left.btn-arrow_project
                    +icon('short-arrow', 'btn-arrow__pic')
                   button.btn-arrow.btn-arrow_right.btn-arrow_project
-                    +icon('short-arrow', 'btn-arrow__pic')
+                    +icon('short-arrow', 'btn-arrow__pic')                  
               .slider__info
                 .slider__tags
                   ul.tags 
@@ -123,7 +126,7 @@ html(lang="en")
                       li.tags__item= item
                 .slider__info-desc
                   h4.slider__info-title Сайт школы образования
-                  .slider__info-text  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi officia id iusto provident repellendus explicabo facilis accusantium voluptatibus, porro sint asperiores quibusdam dolorem in sit magnam praesentium illum saepe aliquid.
+                  .slider__info-text  Lorem ipsum, dolor sit amet Lorem ipsum, dolor sit ametLorem ipsum, dolor sit ametLorem ipsum, dolor sit ametconsecteturd.
                 .slider__info-btns
                   a.iconed-link Посмотреть сайт      
 
@@ -132,55 +135,60 @@ html(lang="en")
 
 
       .bg-rock-musican
+        .contact-parallax
+          each item, index in ["1.png", "2.png", "3.png", "4.png", "5.png"]
+            .contact-parallax__layer(data-speed=`${index/50}`)
+              +image(`parallax/contact-parallax/${item}`, `contact-parallax__item${index + 1}`)
         section.reviews
-          .container
-            .reviews__top
-              h2.reviews__title Что обо мне говорят
-              .reviews__btn
-                button.btn-arrow.btn-arrow_left
-                  +icon('short-arrow', 'btn-arrow__pic')
-                button.btn-arrow.btn-arrow_right
-                  +icon('short-arrow', 'btn-arrow__pic')
-            .reviews__content   
-              .reviews__slider
-                ul.reviews__list
-                  - 
-                    var reviews = [
-                      {
-                        avatar: "kovalchuk.jpg",
-                        name: "Ковальчук Дмитрий",
-                        job: "Основатель LoftSchool",
-                        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In corrupti saepe aut, non nostrum labore quasi nihil, totam, tenetur suscipit consequuntur aspernatur beatae expedita voluptatibus natus placeat? Molestiae, veniam. Cum."
-                      },
-                      {
-                        avatar: "sabancev.jpg",
-                        name: "Владимир Сабанцев",
-                        job: "Преподаватель",
-                        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In corrupti saepe aut, non nostrum labore quasi nihil, totam, tenetur suscipit consequuntur aspernatur beatae expedita voluptatibus natus placeat? Molestiae, veniam. Cum."
-                      },
-                      {
-                        avatar: "kovalchuk.jpg",
-                        name: "Ковальчук Дмитрий",
-                        job: "Основатель LoftSchool",
-                        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In corrupti saepe aut, non nostrum labore quasi nihil, totam, tenetur suscipit consequuntur aspernatur beatae expedita voluptatibus natus placeat? Molestiae, veniam. Cum."
-                      },
-                      {
-                        avatar: "kovalchuk.jpg",
-                        name: "Ковальчук Дмитрий",
-                        job: "Основатель LoftSchool",
-                        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In corrupti saepe aut, non nostrum labore quasi nihil, totam, tenetur suscipit consequuntur aspernatur beatae expedita voluptatibus natus placeat? Molestiae, veniam. Cum."
-                      },
+          .container 
+            #reviews-component
+            //- .reviews__top
+            //-   h2.reviews__title Что обо мне говорят
+            //-   .reviews__btn
+            //-     button.btn-arrow.btn-arrow_left
+            //-       +icon('short-arrow', 'btn-arrow__pic')
+            //-     button.btn-arrow.btn-arrow_right
+            //-       +icon('short-arrow', 'btn-arrow__pic')
+            //- .reviews__content   
+            //-   .reviews__slider
+            //-     ul.reviews__list
+            //-       - 
+            //-         var reviews = [
+            //-           {
+            //-             avatar: "kovalchuk.jpg",
+            //-             name: "Ковальчук Дмитрий",
+            //-             job: "Основатель LoftSchool",
+            //-             text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In corrupti saepe aut, non nostrum labore quasi nihil, totam, tenetur suscipit consequuntur aspernatur beatae expedita voluptatibus natus placeat? Molestiae, veniam. Cum."
+            //-           },
+            //-           {
+            //-             avatar: "sabancev.jpg",
+            //-             name: "Владимир Сабанцев",
+            //-             job: "Преподаватель",
+            //-             text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In corrupti saepe aut, non nostrum labore quasi nihil, totam, tenetur suscipit consequuntur aspernatur beatae expedita voluptatibus natus placeat? Molestiae, veniam. Cum."
+            //-           },
+            //-           {
+            //-             avatar: "kovalchuk.jpg",
+            //-             name: "Ковальчук Дмитрий",
+            //-             job: "Основатель LoftSchool",
+            //-             text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In corrupti saepe aut, non nostrum labore quasi nihil, totam, tenetur suscipit consequuntur aspernatur beatae expedita voluptatibus natus placeat? Molestiae, veniam. Cum."
+            //-           },
+            //-           {
+            //-             avatar: "kovalchuk.jpg",
+            //-             name: "Ковальчук Дмитрий",
+            //-             job: "Основатель LoftSchool",
+            //-             text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In corrupti saepe aut, non nostrum labore quasi nihil, totam, tenetur suscipit consequuntur aspernatur beatae expedita voluptatibus natus placeat? Molestiae, veniam. Cum."
+            //-           },
                       
-                    ]
-                  each reviewsItem in reviews
-                    li.review.reviews__item
-                      .review__text= reviewsItem.text
-                      .review__author
-                        .avatar.review__avatar
-                          +image(`content/${reviewsItem.avatar}`, "avatar__img")
-                        .review__desc
-                          .review__name= reviewsItem.name
-                          .review__job= reviewsItem.job
+            //-         ]
+            //-       each reviewsItem in reviews
+            //-         li.review.reviews__item
+            //-           .review__text= reviewsItem.text
+            //-           .review__author
+            //-             .avatar.review__avatar
+            //-               +image(`content/${reviewsItem.avatar}`, "avatar__img")
+            //-             .review__desc
+            //-               .review__name= reviewsItem.name
+            //-               .review__job= reviewsItem.job
               
         section.contact
           .container.contact__container
@@ -210,15 +218,15 @@ html(lang="en")
             .footer__copyright-date @ 2019
             .footer__user
               .user-info.user-info_footer
-                .user-info__desc Личный сайт<br> веб-разработчика
-                .user-info__name Захаркин<br>Иван
+                .user-info__desc Личный сайт веб-разработчика
+                .user-info__name Захаркин Иван
           .footer__content
             .footer__nav
                 nav.nav
-                ul.nav__list
-                  each navItem in ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
-                    li.nav__item
-                      a(href="#").nav__link= navItem
+                  ul.nav__list
+                    each navItem in ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
+                      li.nav__item
+                        a(href="#").nav__link= navItem
             .footer__text
               .footer__socials
                 .footer__socials-text Это сайт сделан в рамках обучения в онлайн школе LoftSchool

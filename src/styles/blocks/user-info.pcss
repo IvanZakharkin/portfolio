@@ -1,28 +1,51 @@
 .user-info {
   display: flex;
   
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
 
   color: #fff;
   &__desc {
     opacity: 0.4;
     text-align: right;
     margin-right: 60px;
+    max-width: 145px;
+    @include tablets {
+      text-align: center;
+      margin-right: 0px;
+    }
   }
   &__name {
     font-size: 72px;
     font-weight: 800;
     line-height: 0.8;
+    max-width: 400px;
+    @include tablets {
+      text-align: center;
+      font-size: 68px;
+    }
   }
 }
 
 .user-info_footer {
  
   flex-direction: column-reverse;
+
+  @include tablets {
+    align-items: flex-start;
+  }
+  
   .user-info__desc {
     font-size: 16px;
     line-height: 1.875;
     text-align: left;
     margin-right: 0;
+
+    @include phones {
+      max-width: none;
+    }
     
   }
 
@@ -30,7 +53,16 @@
     font-size: 18px;
     line-height: 1.875;
     text-transform: uppercase;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+    max-width: 150px;
     
+    // @include tablets {
+    //   max-width: 150px;
+    // }
+    @include phones {
+      max-width: none;
+    }
   }
+
 }

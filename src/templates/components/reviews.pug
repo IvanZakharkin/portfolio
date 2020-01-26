@@ -1,0 +1,23 @@
+script(type="text/x-template")#reviews-list
+  div
+    .reviews__top
+      h2.reviews__title Что обо мне говорят
+      .reviews__btn
+        button.btn-arrow.btn-arrow_left(@click="previous()")
+          +icon('short-arrow', 'btn-arrow__pic')
+        button.btn-arrow.btn-arrow_right(@click="next()")
+          +icon('short-arrow', 'btn-arrow__pic')
+    .reviews__content   
+      .reviews__slider
+        Flickity(ref="flickity" :options="flickityOptions")
+          div.review.reviews__item.carousel-cell(v-for = "review in reviews")
+            .review__text {{review.text}}
+            .review__author
+              .avatar.review__avatar
+                img.avatar__img(:src= "review.avatar", alt="")
+                //- +image(`${review.avatar}`, "avatar__img")
+              .review__desc
+                .review__name {{review.name}}
+                .review__job {{review.job}}
+
+//- ul.reviews__list
