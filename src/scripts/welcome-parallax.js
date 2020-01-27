@@ -12,6 +12,8 @@ function moveLayersDependsOnScroll(wScroll){
 
 window.addEventListener("scroll", e => {
   const wScroll = window.pageYOffset;
-  console.log(wScroll);
-  moveLayersDependsOnScroll(wScroll);
+  if (window.innerWidth > 1200) {
+    moveLayersDependsOnScroll(wScroll);
+  }
+  
 })
