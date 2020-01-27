@@ -1,6 +1,13 @@
 .scroll {
   display: flex;
   cursor: pointer;
+  background: transparent;
+  border: none;
+  align-items: center;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .scroll__text {

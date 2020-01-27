@@ -1,0 +1,38 @@
+[
+  {
+    "avatar": "kovalchuk.jpg",
+    "name": "Ковальчук Дмитрий",
+    "job": "Основатель LoftSchool",
+    "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In corrupti saepe aut, non nostrum labore quasi nihil, totam, tenetur suscipit consequuntur aspernatur beatae expedita voluptatibus natus placeat? Molestiae, veniam. Cum."
+  },
+  {
+    "avatar": "sabancev.jpg",
+    "name": "Владимир Сабанцев",
+    "job": "Преподаватель",
+    "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In corrupti saepe aut, non nostrum labore quasi nihil, totam, tenetur suscipit consequuntur aspernatur beatae expedita voluptatibus natus placeat? Molestiae, veniam. Cum."
+  },
+  {
+    "avatar": "sabancev.jpg",
+    "name": "Ковальчук Дмитрий",
+    "job": "Основатель LoftSchool",
+    "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In corrupti saepe aut, non nostrum labore quasi nihil, totam, tenetur suscipit consequuntur aspernatur beatae expedita voluptatibus natus placeat? Molestiae, veniam. Cum."
+  },
+  {
+    "avatar": "kovalchuk.jpg",
+    "name": "Ковальчук Дмитрий",
+    "job": "Основатель LoftSchool",
+    "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In corrupti saepe aut, non nostrum labore quasi nihil, totam, tenetur suscipit consequuntur aspernatur beatae expedita voluptatibus natus placeat? Molestiae, veniam. Cum."
+  },
+  {
+    "avatar": "kovalchuk.jpg",
+    "name": "Иван Иванов",
+    "job": "Работает где-то",
+    "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In corrupti saepe aut, non nostrum labore quasi nihil, totam, tenetur suscipit consequuntur aspernatur beatae expedita voluptatibus natus placeat? Molestiae, veniam. Cum."
+  },
+  {
+    "avatar": "kovalchuk.jpg",
+    "name": "Дмитрий Петров",
+    "job": "Работает там-то",
+    "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. In corrupti saepe aut, non nostrum labore quasi nihil, totam, tenetur suscipit consequuntur aspernatur beatae expedita voluptatibus natus placeat? Molestiae, veniam. Cum."
+  }
+]

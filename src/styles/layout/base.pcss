@@ -1,8 +1,8 @@
 html {
-  @include desktop {
+  @include tablets {
     font-size: 15px;
   }
-  @include tablets {
+  @include phones {
     font-size: 14px;
   }
 }
@@ -30,10 +30,15 @@ body {
   margin: 0 auto;
   max-width: 1480px;
   width: 95%;
-  // width: 1490px;
+  @include desktop {
+    max-width: 1080px;
+  }
+  @include tablets {
+    width: 90%;
+  }
 
   @include phones {
-    width: 85%;
+    // width: 85%;
   }
 }
 

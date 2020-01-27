@@ -6,25 +6,71 @@
   &:before {
     content: "";
     display: block;
+    background: url("~images/backgrounds/bg-guitar.png") left bottom/contain no-repeat;
+    position: absolute;
     height: 100%;
     width: 30%;
-    background: url("~images/backgrounds/bg-guitar.png") 50% 50%/contain no-repeat;
-    position: absolute;
-    top: -20%;
-    left: 0;
+    left: 5%;
+    bottom: 26%;
+  }
+
+  @include desktop {
+    &:before {
+      width: 36%;
+      left: -5%;
+    }  
+  }
+  @include tablets {
+    background-position: bottom;
+
+    &:before {
+      transform: rotate(90deg);
+      transform-origin: 100% 100%;
+      bottom: 4%;
+      left: -33%;
+      height: 60%;
+      width: 36%;
+    }  
   }
 }
 .skills-section__container {
   display: flex;
   flex-direction: column;
-  padding: 120px 0% 140px 28%;
+  padding: 136px 0% 140px 28%;
+
+  @include desktop {
+    padding: 0; 
+    padding-left: 23%;
+    padding-top: 90px;
+  }
+
+  @include tablets {
+    padding: 0; 
+    padding-bottom: 460px;
+    // align-items: center;
+  }
+  @include phones {
+    padding-bottom: 200px;
+    // align-items: center;
+  }
+
+  
 }
 
 .skills-section__title {
   font-size: 30px;
   color: #100022;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: 41px;
+
+  @include tablets {
+    text-align: center;
+    padding: 0 25%;
+  }
+  @include phones {
+    text-align: left;
+    padding: 0;
+  }
 }
 
 .skills-section__text {
@@ -34,7 +80,25 @@
   max-width: 599px;
   margin-bottom: 85px;
   line-height: 1.875;
+
+  @include tablets {
+    text-align: center;
+    padding: 0px 15%;
+    max-width: none;
+  }
+  @include phones {
+    text-align: left;
+    padding: 0;
+  }  
 }
 .skills-section__list {
-  padding-left: 15%;
+  padding-left: 13%;
+  padding-right: 7%;
+
+  @include desktop {
+    padding-right: 0%;
+  }
+  @include tablets {
+    padding: 0%;
+  }
 }
